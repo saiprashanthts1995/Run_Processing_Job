@@ -26,3 +26,5 @@ To set up the Amazon EC2 instance for building and pushing the Docker image, fol
 Then we will leverage make functionality to create docker image and push the image to ecr. Then used lambda functionality to create processing job by referring to ECR image.
 
 added
+
+asdasdasd
