@@ -35,13 +35,4 @@ pull vs fetch vs clone vs push
 
 discard vs statsh
 
-asda
-
-ad
-asd
-sd
-as
-das
-as
-a
-das
+learn git
