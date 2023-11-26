@@ -27,4 +27,25 @@ Then we will leverage make functionality to create docker image and push the ima
 
 added
 
-asdasdasd
+new1
+
+
+squash
+rebase
+merge
+update from main
+
+
+pull vs fetch vs clone vs push
+
+discard vs statsh
+
+asdasd
+
+asdsa
+
+asas
+
+
+asda
+d
