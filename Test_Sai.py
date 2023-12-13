@@ -2,7 +2,7 @@ import boto3
 import pandas as pd
 from io import StringIO
 import datetime
-#import os
+import os
 
 def create_s3_client():
     # Initialize the S3 client
@@ -25,12 +25,12 @@ def upload_data_to_csv(s3_client, file_key, df, bucket_name):
     print(f"DataFrame saved as CSV to S3 bucket: {bucket_name}/{file_key}")
 
 def main():
-    BUCKET_NAME = 'lambda-processing-sai'
-    #var1 = os.getenv('a')
+    BUCKET_NAME = 'docker-testing-s3-006'
+    var1 = os.getenv('bucket')
     s3_client = create_s3_client()
     df = create_sample_data()
     now = datetime.datetime.strftime(datetime.datetime.now(), '%Y%m%d%H%M%S')
-    file_key = f'saib_files/a_{now}.csv'
+    file_key = f'saib_files/{var1}/a_{now}.csv'
     upload_data_to_csv(s3_client, file_key, df, BUCKET_NAME)
 
 main()
