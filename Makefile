@@ -11,12 +11,12 @@ start-docker:
 	sudo systemctl start docker.service
 
 buildimg:
-	docker build -t test-sai-img .
+	docker build -t forecast-img .
 
 testimage:
-	docker run -it test-sai-img
+	docker run -it forecast-img
 
 push-to-ecr:
-	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 801355498549.dkr.ecr.us-east-1.amazonaws.com
-	docker tag test-sai-img:latest 801355498549.dkr.ecr.us-east-1.amazonaws.com/test_sai_ecr:latest
-	docker push 801355498549.dkr.ecr.us-east-1.amazonaws.com/test_sai_ecr:latest
+	aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 674125467617.dkr.ecr.us-west-2.amazonaws.com
+	docker tag forecast-img:latest 674125467617.dkr.ecr.us-west-2.amazonaws.com/sagemaker-img-repo:latest
+	docker push 674125467617.dkr.ecr.us-west-2.amazonaws.com/sagemaker-img-repo:latest
